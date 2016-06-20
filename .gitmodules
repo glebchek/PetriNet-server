@@ -1,0 +1,6 @@
+[submodule "PetriNet-cli"]
+	path = PetriNet-cli
+	url = https://github.com/glebchek/PetriNet-cli
+[submodule "PetriNet-client"]
+	path = PetriNet-client
+	url = https://github.com/glebchek/PetriNet-client

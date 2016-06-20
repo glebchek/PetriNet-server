@@ -1,15 +1,15 @@
-file 'analysator/main' => 'analysator/main.hs' do
-  Dir.chdir('analysator')
+file 'PetriNet-cli/main' => 'PetriNet-cli/main.hs' do
+  Dir.chdir('PetriNet-cli')
   sh 'ghc main.hs'
   Dir.chdir('..')
 end
 
-task :serve => 'analysator/main' do
+task :serve => 'PetriNet-cli/main' do
   sh 'ruby server.rb'
 end
 
 task :clean do
-  Dir.chdir('analysator')
+  Dir.chdir('PetriNet-cli')
   sh 'rm *.hi'
   sh 'rm *.o'
   Dir.chdir('..')

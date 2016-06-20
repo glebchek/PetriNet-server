@@ -2,7 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'json'
 
-set :public_folder, 'public'
+set :public_folder, 'PetriNet-client'
 
 get '/' do
     redirect '/index.html'
