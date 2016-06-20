@@ -2,8 +2,6 @@ require 'rubygems'
 require 'sinatra'
 require 'json'
 
-set :public_folder, 'PetriNet-client'
-
 get '/' do
     redirect '/index.html'
 end
@@ -24,5 +22,5 @@ post '/' do
     transfers += "#{text},"
   end
   transfers[-1] = "]"
-  return IO.popen("./analysator/main --from-args \"#{values["mark"]}\" \"#{transfers}\"")
+  return IO.popen("./cli/main --from-args \"#{values["mark"]}\" \"#{transfers}\"")
 end
