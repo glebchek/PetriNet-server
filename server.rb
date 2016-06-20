@@ -6,10 +6,6 @@ get '/' do
     redirect '/index.html'
 end
 
-get '/:file' do
-  redirect '/#{:file}'
-end
-
 post '/' do
   values = "{\"mark\": [3,1,2], \"transfers\": [[[0,0],[1]],[[1],[1,2]],[[0],[0,2]],[[0,2],[]]]}"
   values = JSON.parse(values)
